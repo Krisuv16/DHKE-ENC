@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffie-Hellman Key Exchange</title>
+</head>
+<body>
+    <h1>Diffie-Hellman Key Exchange</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/results" method="post">
+        <label for="p">Enter a prime number (p):</label>
+        <input type="text" name="p" required><br>
+
+        <label for="alice_private_key">Enter Alice's private key:</label>
+        <input type="text" name="alice_private_key" required><br>
+
+        <label for="bob_private_key">Enter Bob's private key:</label>
+        <input type="text" name="bob_private_key" required><br>
+
+        <label for="message">Enter the message to be encrypted:</label>
+        <input type="text" name="message" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
